@@ -1,0 +1,27 @@
+RichText(
+  text: TextSpan(
+    children: [
+      TextSpan(
+        text: 'Single tap',
+        style: TextStyle(color: Colors.red[300]),
+        recognizer: TapGestureRecognizer()..onTap = () {
+          // Single tapped.
+        },
+      ),
+      TextSpan(
+        text: ' Double tap',
+        style: TextStyle(color: Colors.green[300]),
+        recognizer:  DoubleTapGestureRecognizer()..onDoubleTap = () {
+          // Double tapped.
+        }
+      ),
+      TextSpan(
+        text: ' Long press',
+        style: TextStyle(color: Colors.blue[300]),
+        recognizer: LongPressGestureRecognizer()..onLongPress = () {
+          // Long Pressed.
+        },
+      ),
+    ],
+  ),
+)
